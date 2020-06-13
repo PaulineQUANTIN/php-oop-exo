@@ -1,0 +1,4 @@
+$user = [
+    'login' => 'toto',
+    'password' => '12345678',
+];

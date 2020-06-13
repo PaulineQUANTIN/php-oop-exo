@@ -1,0 +1,19 @@
+body {
+    overflow: hidden;
+}
+
+.foo img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 80px;
+    margin-top: -50px;
+}
+
+.container-fluid {
+    background: no-repeat center/100% url('../img/seashore.png');
+    height: 600px;
+}
+
+.bar {
+    color: rgba(0, 0, 0, 0.5);
+}
