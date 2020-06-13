@@ -2,8 +2,4 @@
 !var/cache/.gitkeep
 /vendor
 /img/*
-enonce.txt
-login.txt
-logout.txt
-private-page.txt
-user-data.txt
+
