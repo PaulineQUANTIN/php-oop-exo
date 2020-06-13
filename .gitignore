@@ -1,5 +1,4 @@
 /var/cache/*
 !var/cache/.gitkeep
 /vendor
-/img/*
-
+php-oop-exo/img/*
