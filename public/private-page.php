@@ -26,7 +26,9 @@ $user_id = [
 
 if (isset($_SESSION['login'])) {
     $user_id['login'] = $_SESSION['login'];
-} elseif (!isset($_SESSION['login'])) {
+} 
+
+elseif (!isset($_SESSION['login'])) {
     $url = 'login.php';
         header("Location: {$url}", true, 302);
         exit();

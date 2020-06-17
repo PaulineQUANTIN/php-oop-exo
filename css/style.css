@@ -1,5 +1,5 @@
 body {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .foo img {
@@ -11,7 +11,7 @@ body {
 
 .container-fluid {
     background: no-repeat center/100% url('../img/seashore.png');
-    height: 600px;
+    height: auto;
 }
 
 .bar {

@@ -19,18 +19,19 @@ $twig->addExtension(new \Twig\Extension\DebugExtension());
 
 session_start();
 
+$user = require __DIR__.'/user-data.php';
+
 $formData = [
     'login' => '',
     'password'  => '',
 ];
 
+$errors = [];
+$messages = [];
+
 $_SESSION = [];
 
-$user = require __DIR__.'/user-data.php';
-
 if ($_POST) {
-    $errors = [];
-    $messages = [];
 
     // remplacement des valeur par défaut par celles de l'utilisateur
     if (isset($_POST['login'])) {
