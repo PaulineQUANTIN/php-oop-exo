@@ -27,29 +27,29 @@ $article = [
     'quantity' => ''
 ];
 
-if ($_GET) {
-    if(isset($_GET['id'])) {
-        $article['id'] = $_GET['id'];
-        $article['name'] = $_GET['name'];
-        $article['description'] = $_GET['description'];
-        $article['price'] = $_GET['price'];
-        $article['quantity'] = $_GET['quantity'];
-    } 
-    
-    elseif (!isset($_GET['id']) || empty($_GET['id'])) {
-        // aucun id n'est spécifié
-        $url = 'article-404.php';
-        header("Location: {$url}", true, 302);
-        exit();
-    }
 
-    elseif (!articleExists($_GET['id'], $articles)) {
-        // l'article n'existe pas
-        $url = 'article-404.php';
-        header("Location: {$url}", true, 302);
-        exit();
-    }
+if(isset($_GET['id'])) {
+    $article['id'] = $_GET['id'];
+    $article['name'] = $_GET['name'];
+    $article['description'] = $_GET['description'];
+    $article['price'] = $_GET['price'];
+    $article['quantity'] = $_GET['quantity'];
+} 
+
+elseif (!isset($_GET['id']) || empty($_GET['id'])) {
+    // aucun id n'est spécifié
+    $url = 'article-404.php';
+    header("Location: {$url}", true, 302);
+    exit();
 }
+
+elseif (!articleExists($_GET['id'], $articles)) {
+    // l'article n'existe pas
+    $url = 'article-404.php';
+    header("Location: {$url}", true, 302);
+    exit();
+}
+
 
 $data = [
     'id' => '',
